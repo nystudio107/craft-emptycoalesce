@@ -28,7 +28,7 @@ You can also install Empty Coalesce via the **Plugin Store** in the Craft AdminC
 
 Empty Coalesce adds the `???` operator to Twig that will return the first thing that is defined, not null, and not empty. This is particularly useful when you're dealing with a number of fallback/default values that may or may not exist, and may or may not be empty.
 
-The `???` Empty Coalescing operator is similar to the `??` null coalescing operator, but also ignores empty strings (`""`) and empty arrays (`[]`) as well.
+The `???` Empty Coalescing operator is similar to the `??` [null coalescing operator](https://nystudio107.com/blog/handling-errors-gracefully-in-craft-cms#coalescing-the-night-away), but also ignores empty strings (`""`) and empty arrays (`[]`) as well.
 
 ![Screenshot](resources/screenshots/null-coalescing-screenshot.png)
 
@@ -49,7 +49,7 @@ The problem is that to [code defensively](https://nystudio107.com/blog/handling-
 
 This gets quite verbose and quite tiresome quickly. There are other ways you can do something similar, such as using using the `?:` [ternary operator](https://twig.symfony.com/doc/2.x/templates.html#other-operators) and the [default filter](https://twig.symfony.com/doc/2.x/filters/default.html), but this too gets a bit unwieldy.
 
-You can use the null coalescing operator, which picks the first thing that is defined and not null:
+You can use the [null coalescing operator](https://nystudio107.com/blog/handling-errors-gracefully-in-craft-cms#coalescing-the-night-away), which picks the first thing that is defined and not null:
 
 ```twig
 {% set description = entry.description ?? category.description ?? global.description %}
