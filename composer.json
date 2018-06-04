@@ -4,13 +4,14 @@
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
-        "craft",
-        "cms",
         "craftcms",
         "craft-plugin",
+        "craft3",
         "empty",
         "coalesce",
-        "operator"
+        "operator",
+        "coalescing",
+        "twig"
     ],
     "support": {
         "docs": "https://github.com/nystudio107/craft-emptycoalesce/blob/master/README.md",
