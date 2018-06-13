@@ -1,3 +1,5 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/quality-score.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v1) [![Code Coverage](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/coverage.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v1) [![Build Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/build.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/build-status/v1) [![Code Intelligence Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/code-intelligence.svg?b=v1)](https://scrutinizer-ci.com/code-intelligence)
+
 # Empty Coalesce plugin for Craft CMS 3.x
 
 Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.
