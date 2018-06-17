@@ -95,8 +95,8 @@ bark
 ```
 
 ...because:
-- `bar` is `null`
 - `woof` is undefined
+- `bar` is `null`
 - `foo` is an empty string
 - `baz` is an empty array
 
