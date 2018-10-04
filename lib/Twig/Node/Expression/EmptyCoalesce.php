@@ -29,29 +29,18 @@ class Twig_Node_Expression_EmptyCoalesce extends \Twig_Node_Expression_Condition
 
     public function compile(\Twig_Compiler $compiler)
     {
-        /*
-         * This optimizes only one case. PHP 7 also supports more complex expressions
-         * that can return null. So, for instance, if log is defined, log("foo") ?? "..." works,
-         * but log($a["foo"]) ?? "..." does not if $a["foo"] is not defined. More advanced
-         * cases might be implemented as an optimizer node visitor, but has not been done
-         * as benefits are probably not worth the added complexity.
-         */
-        if ($this->getNode('expr2') instanceof \Twig_Node_Expression_Name) {
-            $this->getNode('expr2')->setAttribute('always_defined', true);
-            $compiler
-                ->raw('((empty(')
-                ->subcompile($this->getNode('expr2'))
-                ->raw(') ? null : ')
-                ->subcompile($this->getNode('expr2'))
-                ->raw(') ?? (empty(')
-                ->subcompile($this->getNode('expr3'))
-                ->raw(') ? null : ')
-                ->subcompile($this->getNode('expr3'))
-                ->raw('))')
-            ;
-        } else {
-            parent::compile($compiler);
-        }
+        $this->getNode('expr2')->setAttribute('always_defined', true);
+        $compiler
+            ->raw('((empty(')
+            ->subcompile($this->getNode('expr2'))
+            ->raw(') ? null : ')
+            ->subcompile($this->getNode('expr2'))
+            ->raw(') ?? (empty(')
+            ->subcompile($this->getNode('expr3'))
+            ->raw(') ? null : ')
+            ->subcompile($this->getNode('expr3'))
+            ->raw('))')
+        ;
     }
 }
 

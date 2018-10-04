@@ -1,6 +1,12 @@
 # Empty Coalesce Changelog
 
-All notable changes to this project will be documented in this file.
+## 1.0.2 - 2018-10-04
+### Changed
+* Fixed an issue where if the first expression was a constant, the evaluation wouldn't work as expected
+
+## 1.0.1 - 2018-09-21
+### Changed
+* Fixed broken documentation URLs
 
 ## 1.0.0 - 2018-06-04
 ### Added
