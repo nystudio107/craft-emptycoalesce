@@ -1,18 +1,19 @@
 <?php
 /**
- * SEOmatic plugin for Craft CMS 3.x
+ * Empty Coalesce plugin for Craft CMS 3.x
  *
- * A turnkey SEO implementation for Craft CMS that is comprehensive, powerful,
- * and flexible
+ * Empty Coalesce adds the ??? operator to Twig that will return the first thing
+ * that is defined, not null, and not empty.
  *
- * @link      https://nystudio107.com
- * @copyright Copyright (c) 2017 nystudio107
+ * @link      https://nystudio107.com/
+ * @copyright Copyright (c) 2018 nystudio107
  */
 
 /**
  * @author    nystudio107
- * @package   Seomatic
- * @since     3.0.0
+ * @package   EmptyCoalesce
+ * @since     1.0.0
+ *
  */
 class Twig_Node_Expression_EmptyCoalesce extends \Twig_Node_Expression
 {
@@ -47,4 +48,4 @@ class Twig_Node_Expression_EmptyCoalesce extends \Twig_Node_Expression
     }
 }
 
-class_alias('Twig_Node_Expression_EmptyCoalesce', 'nystudio107\seomatic\Node\Expression\EmptyCoalesceExpression', false);
+class_alias('Twig_Node_Expression_EmptyCoalesce', 'nystudio107\emptycoalesce\Node\Expression\EmptyCoalesceExpression', false);
