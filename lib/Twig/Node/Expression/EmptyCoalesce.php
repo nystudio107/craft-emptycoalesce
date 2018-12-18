@@ -14,33 +14,36 @@
  * @package   Seomatic
  * @since     3.0.0
  */
-class Twig_Node_Expression_EmptyCoalesce extends \Twig_Node_Expression_Conditional
+class Twig_Node_Expression_EmptyCoalesce extends \Twig_Node_Expression
 {
-    public function __construct(\Twig_Node $left, \Twig_Node $right, $lineno)
-    {
-        $test = new \Twig_Node_Expression_Binary_And(
-            new \Twig_Node_Expression_Test_Defined(clone $left, 'defined', new \Twig_Node(), $left->getTemplateLine()),
-            new \Twig_Node_Expression_Unary_Not(new \Twig_Node_Expression_Test_Null($left, 'null', new \Twig_Node(), $left->getTemplateLine()), $left->getTemplateLine()),
-            $left->getTemplateLine()
-        );
 
-        parent::__construct($test, $left, $right, $lineno);
+    public function __construct(Twig_Node $left, Twig_Node $right, $lineno)
+    {
+        $left->setAttribute('ignore_strict_check', true);
+        $left->setAttribute('is_defined_test', false);
+        $right->setAttribute('ignore_strict_check', true);
+        $right->setAttribute('is_defined_test', false);
+        parent::__construct(
+            ['left' => $left, 'right' => $right],
+            ['ignore_strict_check' => true, 'is_defined_test' => false],
+            $lineno
+        );
     }
 
     public function compile(\Twig_Compiler $compiler)
     {
-        $this->getNode('expr2')->setAttribute('always_defined', true);
-        $compiler
-            ->raw('((empty(')
-            ->subcompile($this->getNode('expr2'))
-            ->raw(') ? null : ')
-            ->subcompile($this->getNode('expr2'))
-            ->raw(') ?? (empty(')
-            ->subcompile($this->getNode('expr3'))
-            ->raw(') ? null : ')
-            ->subcompile($this->getNode('expr3'))
-            ->raw('))')
-        ;
+            //$this->getNode('expr1')->setAttribute('always_defined', true);
+            $compiler
+                ->raw('((empty(')
+                ->subcompile($this->getNode('left'))
+                ->raw(') ? null : ')
+                ->subcompile($this->getNode('left'))
+                ->raw(') ?? (empty(')
+                ->subcompile($this->getNode('right'))
+                ->raw(') ? null : ')
+                ->subcompile($this->getNode('right'))
+                ->raw('))')
+            ;
     }
 }
 
