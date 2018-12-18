@@ -24,7 +24,7 @@ To install the plugin, follow these instructions.
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Empty Coalesce.
 
-You can also install Empty Coalesce via the **Plugin Store** in the Craft AdminCP.
+You can also install Empty Coalesce via the **Plugin Store** in the Craft Control Panel.
 
 ## Empty Coalesce Overview
 

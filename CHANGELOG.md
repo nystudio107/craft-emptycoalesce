@@ -1,5 +1,9 @@
 # Empty Coalesce Changelog
 
+## 1.0.3 - 2018-12-18
+### Changed
+* Refactored the node parser to handle all undefined values appropriately
+
 ## 1.0.2 - 2018-10-04
 ### Changed
 * Fixed an issue where if the first expression was a constant, the evaluation wouldn't work as expected
