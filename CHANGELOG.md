@@ -1,5 +1,10 @@
 # Empty Coalesce Changelog
 
+## 1.0.4 - 2018-12-20
+### Changed
+* Fixed namespacing/comments
+* Fixed tests
+
 ## 1.0.3 - 2018-12-18
 ### Changed
 * Refactored the node parser to handle all undefined values appropriately
