@@ -23,6 +23,30 @@ use Twig\Node\Node;
  */
 class EmptyCoalesceExpression extends AbstractExpression
 {
+    /**
+     * Checks if a variable is empty.
+     *
+     *    {# evaluates to true if the foo variable is null, false, or the empty string #}
+     *    {% if foo is empty %}
+     *        {# ... #}
+     *    {% endif %}
+     *
+     * @param mixed $value A variable
+     *
+     * @return bool true if the value is empty, false otherwise
+     */
+    public static function empty($value): bool
+    {
+        if ($value instanceof \Countable) {
+            return 0 == \count($value);
+        }
+
+        if (\is_object($value) && method_exists($value, '__toString')) {
+            return '' === (string) $value;
+        }
+
+        return '' === $value || false === $value || null === $value || [] === $value;
+    }
 
     public function __construct(Node $left, Node $right, $lineno)
     {
@@ -41,11 +65,11 @@ class EmptyCoalesceExpression extends AbstractExpression
     {
         //$this->getNode('expr1')->setAttribute('always_defined', true);
         $compiler
-            ->raw('((empty(')
+            ->raw('(('.self::class.'::empty(')
             ->subcompile($this->getNode('left'))
             ->raw(') ? null : ')
             ->subcompile($this->getNode('left'))
-            ->raw(') ?? (empty(')
+            ->raw(') ?? ('.self::class.'::empty(')
             ->subcompile($this->getNode('right'))
             ->raw(') ? null : ')
             ->subcompile($this->getNode('right'))
