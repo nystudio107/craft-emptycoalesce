@@ -11,12 +11,17 @@
 
 namespace nystudio107\emptycoalesce\twigextensions;
 
+use nystudio107\emptycoalesce\Node\Expression\EmptyCoalesceExpression;
+
+use Twig\ExpressionParser;
+use Twig\Extension\AbstractExtension;
+
 /**
  * @author    nystudio107
  * @package   EmptyCoalesce
  * @since     1.0.0
  */
-class EmptyCoalesceTwigExtension extends \Twig_Extension
+class EmptyCoalesceTwigExtension extends AbstractExtension
 {
     // Public Methods
     // =========================================================================
@@ -59,8 +64,8 @@ class EmptyCoalesceTwigExtension extends \Twig_Extension
             [
                 '???' => [
                     'precedence' => 300,
-                    'class' => \Twig_Node_Expression_EmptyCoalesce::class,
-                    'associativity' => \Twig_ExpressionParser::OPERATOR_RIGHT
+                    'class' => EmptyCoalesceExpression::class,
+                    'associativity' => ExpressionParser::OPERATOR_RIGHT
                 ],
             ],
         ];
