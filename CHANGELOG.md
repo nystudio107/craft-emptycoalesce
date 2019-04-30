@@ -1,5 +1,10 @@
 # Empty Coalesce Changelog
 
+## 1.0.5 - 2019-04-30
+### Changed
+* Updated Twig namespacing to be compliant with deprecated class aliases in 2.7.x
+* Use Twig's `twig_test_empty()` instead of PHP's `empty()`
+
 ## 1.0.4 - 2018-12-20
 ### Changed
 * Fixed namespacing/comments
