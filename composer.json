@@ -2,7 +2,7 @@
     "name": "nystudio107/craft-emptycoalesce",
     "description": "Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.",
     "type": "craft-plugin",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "keywords": [
         "craftcms",
         "craft-plugin",
@@ -28,9 +28,6 @@
         "craftcms/cms": "^3.0.0"
     },
     "autoload": {
-        "psr-0" : {
-            "Twig_" : "lib/"
-        },
         "psr-4": {
           "nystudio107\\emptycoalesce\\": "src/"
         }
