@@ -1,5 +1,9 @@
 # Empty Coalesce Changelog
 
+## 1.0.6 - 2019-05-23
+### Changed
+* Remove the pointless `Twig_Node_Expression_EmptyCoalesce` class
+
 ## 1.0.5 - 2019-04-30
 ### Changed
 * Updated Twig namespacing to be compliant with deprecated class aliases in 2.7.x
