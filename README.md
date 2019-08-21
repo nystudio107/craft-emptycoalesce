@@ -4,7 +4,7 @@
 
 Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.
 
-![Screenshot](docs/resources/img/plugin-logo.png)
+![Screenshot](./docs/docs/resources/img/plugin-logo.png)
 
 ## Requirements
 
