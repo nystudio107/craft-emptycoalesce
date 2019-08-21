@@ -22,7 +22,7 @@ To install the plugin, follow these instructions.
 
         composer require nystudio107/craft-emptycoalesce
 
-3. Install the plugin via `./craft install/plugin empty-coalesce` via the CLI, or in the Control Panel, go to Settings → Plugins and click the “Install” button for Connect.
+3. Install the plugin via `./craft install/plugin empty-coalesce` via the CLI, or in the Control Panel, go to Settings → Plugins and click the “Install” button for Empty Coalesce.
 
 You can also install Empty Coalesce via the **Plugin Store** in the Craft Control Panel.
 
