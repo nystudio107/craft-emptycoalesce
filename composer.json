@@ -14,8 +14,8 @@
         "twig"
     ],
     "support": {
-        "docs": "https://github.com/nystudio107/craft-emptycoalesce/blob/v1/README.md",
-        "issues": "https://github.com/nystudio107/craft-emptycoalesce/issues"
+        "docs": "https://nystudio107.com/plugins/empty-coalesce/documentation",
+        "issues": "https://nystudio107.com/plugins/empty-coalesce/support"
     },
     "license": "MIT",
     "authors": [
