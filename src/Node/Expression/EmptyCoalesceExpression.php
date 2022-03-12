@@ -48,10 +48,11 @@ class EmptyCoalesceExpression extends AbstractExpression
         return '' === $value || false === $value || null === $value || [] === $value;
     }
 
-    public function __construct(Node $left, Node $right, $lineno)
+    public function __construct(Node $left, Node $right, int $lineno)
     {
         $left->setAttribute('ignore_strict_check', true);
         $left->setAttribute('is_defined_test', false);
+
         $right->setAttribute('ignore_strict_check', true);
         $right->setAttribute('is_defined_test', false);
         parent::__construct(
@@ -61,7 +62,7 @@ class EmptyCoalesceExpression extends AbstractExpression
         );
     }
 
-    public function compile(Compiler $compiler)
+    public function compile(Compiler $compiler): void
     {
         //$this->getNode('expr1')->setAttribute('always_defined', true);
         $compiler

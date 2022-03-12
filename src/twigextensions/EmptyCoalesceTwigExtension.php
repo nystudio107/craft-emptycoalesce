@@ -53,7 +53,7 @@ class EmptyCoalesceTwigExtension extends AbstractExtension
     }
 
     /**
-     * @return array
+     * @return array<int, mixed[]>
      */
     public function getOperators(): array
     {
