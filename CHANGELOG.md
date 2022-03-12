@@ -1,5 +1,11 @@
 # Empty Coalesce Changelog
 
+## 4.0.0-beta.1 - 2022.03.12
+
+### Added
+
+* Initial Craft CMS 4 compatibility
+
 ## 1.0.6 - 2019-05-23
 ### Changed
 * Remove the pointless `Twig_Node_Expression_EmptyCoalesce` class
