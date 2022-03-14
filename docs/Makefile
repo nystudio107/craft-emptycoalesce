@@ -7,7 +7,7 @@ DOCKERRUN=docker container run \
 	-t \
 	-v `pwd`:/app \
 	${CONTAINER}:${TAG}
-DOCSDEST?=../../../sites/nystudio107/web/docs/recipe
+DOCSDEST?=../../../sites/nystudio107/web/docs/empty-coalesce
 
 .PHONY: docker build dev fix install lint clean npm
 
