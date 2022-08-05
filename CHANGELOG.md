@@ -1,5 +1,9 @@
 # Empty Coalesce Changelog
 
+## 4.0.0 - 2022.08.04
+### Added
+* Initial Craft CMS 4 release
+
 ## 4.0.0-beta.1 - 2022.03.12
 
 ### Added
