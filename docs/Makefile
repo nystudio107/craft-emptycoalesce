@@ -7,7 +7,7 @@ DOCKERRUN=docker container run \
 	-t \
 	-v `pwd`:/app \
 	${CONTAINER}:${TAG}
-DOCSDEST?=../../../sites/nystudio107/web/docs/recipe
+DOCSDEST?=../../../sites/nystudio107/web/docs/empty-coalesce
 
 .PHONY: docker build dev fix install lint clean npm
 
@@ -34,7 +34,7 @@ install: docker
 lint: docker install
 	${DOCKERRUN} \
 		run docs:lint
-clean: docker
+clean:
 	rm -rf node_modules/
 	rm -f package-lock.json
 npm: docker

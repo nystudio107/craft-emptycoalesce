@@ -14,9 +14,9 @@ module.exports = {
     docsDir: 'docs/docs',
     docsBranch: 'v1',
     algolia: {
-      appId: '',
-      apiKey: '',
-      indexName: ''
+      appId: 'L15LEW8LWP',
+      apiKey: '39198fa2e54d3da8c644d9cd241cff5a',
+      indexName: 'nystudio107-empty-coalesce'
     },
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
