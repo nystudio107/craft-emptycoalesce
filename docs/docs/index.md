@@ -80,7 +80,7 @@ Using the Empty Coalescing operator is simple; you can chain together as many va
 ```twig
 {% set choice = thingOne ??? thingTwo ??? thingThree ??? thingFour %}
 ```
-The first thing that is defined, not null, and not empty will be what `choise` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
+The first thing that is defined, not null, and not empty will be what `choice` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
 
 ```twig
 {% set bar = null %}
