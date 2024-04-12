@@ -8,7 +8,7 @@ Empty Coalesce adds the ??? operator to Twig that will return the first thing th
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or Craft CMS 4.0.0 or later.
+This plugin requires Craft CMS 3.0.0 or later.
 
 ## Installation
 
