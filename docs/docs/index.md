@@ -8,7 +8,7 @@ Empty Coalesce adds the ??? operator to Twig that will return the first thing th
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or Craft CMS 4.0.0 or later.
+This plugin requires Craft CMS 3.0.0 or later.
 
 ## Installation
 
@@ -80,7 +80,7 @@ Using the Empty Coalescing operator is simple; you can chain together as many va
 ```twig
 {% set choice = thingOne ??? thingTwo ??? thingThree ??? thingFour %}
 ```
-The first thing that is defined, not null, and not empty will be what `choise` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
+The first thing that is defined, not null, and not empty will be what `choice` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
 
 ```twig
 {% set bar = null %}
