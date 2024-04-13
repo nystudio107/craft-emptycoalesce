@@ -11,10 +11,10 @@
 
 namespace nystudio107\emptycoalesce;
 
-use nystudio107\emptycoalesce\twigextensions\EmptyCoalesceTwigExtension;
-
 use Craft;
+
 use craft\base\Plugin;
+use nystudio107\emptycoalesce\twigextensions\EmptyCoalesceTwigExtension;
 
 /**
  * Class EmptyCoalesce

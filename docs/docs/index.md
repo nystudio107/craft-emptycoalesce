@@ -1,4 +1,4 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/quality-score.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v1) [![Code Coverage](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/coverage.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v1) [![Build Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/build.png?b=v1)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/build-status/v1) [![Code Intelligence Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/code-intelligence.svg?b=v1)](https://scrutinizer-ci.com/code-intelligence)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/quality-score.png?b=v4)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v4) [![Code Coverage](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/coverage.png?b=v4)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/?branch=v4) [![Build Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/build.png?b=v4)](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/build-status/v4) [![Code Intelligence Status](https://scrutinizer-ci.com/g/nystudio107/craft-emptycoalesce/badges/code-intelligence.svg?b=v4)](https://scrutinizer-ci.com/code-intelligence)
 
 # Empty Coalesce plugin for Craft CMS
 
@@ -8,7 +8,7 @@ Empty Coalesce adds the ??? operator to Twig that will return the first thing th
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0 or Craft CMS 4.0.0 or later.
+This plugin requires Craft CMS 4.0.0 or later.
 
 ## Installation
 
@@ -80,7 +80,7 @@ Using the Empty Coalescing operator is simple; you can chain together as many va
 ```twig
 {% set choice = thingOne ??? thingTwo ??? thingThree ??? thingFour %}
 ```
-The first thing that is defined, not null, and not empty will be what `choise` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
+The first thing that is defined, not null, and not empty will be what `choice` is set to. If _nothing_ meets that criteria, then `choice` is set to `null`. For example:
 
 ```twig
 {% set bar = null %}

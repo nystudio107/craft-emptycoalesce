@@ -65,7 +65,7 @@ class EmptyCoalesceTwigExtension extends AbstractExtension
                 '???' => [
                     'precedence' => 300,
                     'class' => EmptyCoalesceExpression::class,
-                    'associativity' => ExpressionParser::OPERATOR_RIGHT
+                    'associativity' => ExpressionParser::OPERATOR_RIGHT,
                 ],
             ],
         ];
