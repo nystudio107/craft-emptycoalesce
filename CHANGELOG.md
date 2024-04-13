@@ -1,5 +1,15 @@
 # Empty Coalesce Changelog
 
+## 1.0.7 - 2024.04.13
+### Added
+* Add `phpstan` and `ecs` code linting
+* Add `code-analysis.yaml` GitHub action
+
+### Changed
+* Updated docs to use node 20 & a new sitemap plugin
+* PHPstan code cleanup
+* ECS code cleanup
+
 ## 1.0.6 - 2019-05-23
 ### Changed
 * Remove the pointless `Twig_Node_Expression_EmptyCoalesce` class
