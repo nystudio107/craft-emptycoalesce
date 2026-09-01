@@ -12,8 +12,10 @@
 namespace nystudio107\emptycoalesce\twigextensions;
 
 use nystudio107\emptycoalesce\Node\Expression\EmptyCoalesceExpression;
-
+use Twig\Environment;
 use Twig\ExpressionParser;
+use Twig\ExpressionParser\Infix\BinaryOperatorExpressionParser;
+use Twig\ExpressionParser\InfixAssociativity;
 use Twig\Extension\AbstractExtension;
 
 /**
@@ -53,10 +55,17 @@ class EmptyCoalesceTwigExtension extends AbstractExtension
     }
 
     /**
-     * @return array<int, mixed[]>
+     * @return array
      */
     public function getOperators(): array
     {
+        // Twig 3.21 and later deprecate this function in favor of getExpressionParsers()
+        // @phpstan-ignore greater.alwaysTrue
+        if (Environment::VERSION_ID > 32100) {
+            return [[], []];
+        }
+        // Older versions of Twig
+        // @phpstan-ignore-next-line
         return [
             // Unary operators
             [],
@@ -64,10 +73,29 @@ class EmptyCoalesceTwigExtension extends AbstractExtension
             [
                 '???' => [
                     'precedence' => 300,
-                    'class' => EmptyCoalesceExpression::class,
+                    'class' => \nystudio107\seomatic\Node\Expression\EmptyCoalesceExpression::class,
                     'associativity' => ExpressionParser::OPERATOR_RIGHT,
                 ],
             ],
+        ];
+    }
+
+    /**
+     * Added for Twig 3.21+ support to remove deprecation errors
+     *
+     * @return BinaryOperatorExpressionParser[]
+     */
+    public function getExpressionParsers(): array
+    {
+        return [
+            new BinaryOperatorExpressionParser(
+            // phpstan wants an explicit class-string<Twig\Node\Expression\Binary\AbstractBinary>
+            // But that wasn't introduced until Twig 3.21
+            // @phpstan-ignore-next-line
+                EmptyCoalesceExpression::class,
+                '???',
+                300,
+                InfixAssociativity::Right),
         ];
     }
 }
