@@ -2,7 +2,7 @@
 
 # Empty Coalesce plugin for Craft CMS
 
-Empty Coalesce adds the ??? operator to Twig that will return the first thing that is defined, not null, and not empty.
+Empty Coalesce adds the ??? Operator to Twig that will return the first thing that is defined, not null, and not empty.
 
 ![Screenshot](./resources/img/plugin-logo.png)
 
@@ -28,14 +28,14 @@ You can also install Empty Coalesce via the **Plugin Store** in the Craft Contro
 
 ## Empty Coalesce Overview
 
-Empty Coalesce adds the `???` operator to Twig that will return the first thing that is defined, not null, and not empty. This is particularly useful when you're dealing with a number of fallback/default values that may or may not exist, and may or may not be empty.
+Empty Coalesce adds the `???` operator to Twig that will return the first thing that is defined, not null, and not empty. This is particularly useful when you’re dealing with a number of fallback/default values that may or may not exist, and may or may not be empty.
 
 The `???` Empty Coalescing operator is similar to the `??` [null coalescing operator](https://nystudio107.com/blog/handling-errors-gracefully-in-craft-cms#coalescing-the-night-away), but also ignores empty strings (`""`) and empty arrays (`[]`) as well.
 
 ![Screenshot](./resources/screenshots/null-coalescing-screenshot.png)
 
 
-It's pretty common in Twig that you might want to do something like use an `entry.description` if it exists, and if not, use a `category.description` if it exists, and then finally fall back on using some default `global.description`.
+It’s pretty common in Twig that you might want to do something like use an `entry.description` if it exists, and if not, use a `category.description` if it exists, and then finally fall back on using some default `global.description`.
 
 The problem is that to [code defensively](https://nystudio107.com/blog/handling-errors-gracefully-in-craft-cms#defensive-coding-in-twig), you want to make sure that all of these things are defined, not null, and also have a value. So you end up with something like:
 
@@ -57,7 +57,7 @@ You can use the [null coalescing operator](https://nystudio107.com/blog/handling
 {% set description = entry.description ?? category.description ?? global.description %}
 ```
 
-But the problem here is it'll _just_ pick the first thing that is defined and not `null`. So if `entry.description` is an empty string, it'll use that, which is rarely what you want.
+But the problem here is it’ll _just_ pick the first thing that is defined and not `null`. So if `entry.description` is an empty string, it’ll use that, which is rarely what you want.
 
 Enter the Empty Coalescing operator, and it becomes:
 
@@ -67,11 +67,11 @@ Enter the Empty Coalescing operator, and it becomes:
 
 Now the first thing that is defined, not null, _and_ not empty will be what `description` is set to.
 
-Nice. Simple. Readable. And most importantly, likely the result you're expecting.
+Nice. Simple. Readable. And most importantly, likely the result you’re expecting.
 
 ## Configuring Empty Coalesce
 
-There's nothing to configure.
+There’s nothing to configure.
 
 ## Using Empty Coalesce
 
